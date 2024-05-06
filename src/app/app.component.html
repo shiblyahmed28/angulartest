@@ -1,0 +1,46 @@
+<h1>Blog component 1</h1>
+<ul>
+  <li>Blog 1</li>
+</ul>
+<app-blog-post></app-blog-post>
+<h1>{{"Title :" + title}}</h1>
+<h1>{{"Title by getTitle : " + getTitle()}}</h1>
+<ul>
+  <li *ngFor="let blog of blogs">{{blog}}</li>
+</ul>
+<p>{{number}}</p>
+<div (click)="onDivClick()"></div>
+<button (clcik)="onClick($event)">Save</button>
+<div *ngFor="let blogPost of blogPosts">
+  <h2>{{blogPost.Title}}</h2>
+<p>{{blogPost.Description}}</p>
+<p>Writer: {{"Author : " +blogPost.Author}}</p>
+</div>
+
+<div class="blog-post" *ngFor="let blogPost of blogPosts">
+  <h2>{{blogPost.Title}}</h2>
+<p>{{blogPost.Description}}</p>
+<p>Writer: {{"Author : " +blogPost.Author}}</p>
+</div>
+
+<div *ngFor="let newblogPost of newblogPosts">
+  <h2>{{newblogPost.Title}}</h2>
+<p>{{newblogPost.Description}}</p>
+<p>Writer: {{"Author : " +newblogPost.Author}}</p>
+</div>
+<h1>{{title}}</h1>
+<h2 [textContent]="title"></h2>
+<input [value] ="email" type = "text">
+<button (click)="onSave()">save</button>
+<li></li>
+<div>
+<input [(ngModel)] ="email" type = "text">
+<button (click)="onSave1()">save</button>
+</div>
+<p></p>
+<img src ={{imageUrl}} alt ="">
+<img [src]="imageUrl" alt="">
+<li></li>
+//http call now
+<img src="{{imageSrc}}" alt="">
+
